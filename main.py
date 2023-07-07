@@ -17,7 +17,7 @@ MAL_TOKEN_URL = 'https://myanimelist.net/v1/oauth2/token'
 
 class Login(Resource):
     def get(self):
-        state = secrets.token_urlsage(64)
+        state = secrets.token_urlsafe(16)
         code_challenge = secrets.token_urlsafe(64)
 
         params = {
@@ -60,3 +60,9 @@ class Callback(Resource):
             })
 
         return r.json()
+
+api.add_resource(Login, '/login')
+api.add_resource(Callback, '/callback')
+
+if __name__ == '__main__':
+    app.run(debug=True, port=8000)
