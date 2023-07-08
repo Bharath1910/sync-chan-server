@@ -6,6 +6,10 @@ Sync Chan was supposed to be an chrome extension to easily sync currently watchi
 
 Due to it, I decided to stop the development of this project. 
 
+# Authorization Workflow
+
+![authorization-workflow](./sync-chan-auth-workflow.jpg)
+
 # Learnings
 
 - Understaning how OAuth2 authorization workflow works
